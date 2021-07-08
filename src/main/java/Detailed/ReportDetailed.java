@@ -8,8 +8,8 @@ import java.net.URL;
 
 public class ReportDetailed {
 
-    public static final  String target="REPORT";
-    public static final String clientID="Your ClientId";
+    private static final  String target="REPORT";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args) throws Exception {

@@ -9,8 +9,8 @@ import java.net.URLEncoder;
 
 public class SearchApplicant {
 
-    public static final  String target="APPLICANT";
-    public static final String clientID="Your ClientId";
+    private static final  String target="APPLICANT";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args){

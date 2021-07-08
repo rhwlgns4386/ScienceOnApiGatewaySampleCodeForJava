@@ -9,8 +9,8 @@ import java.net.URLEncoder;
 
 public class SearchPatent {
 
-    public static final  String target="PATENT";
-    public static final String clientID="Your ClientId";
+    private static final  String target="PATENT";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args){

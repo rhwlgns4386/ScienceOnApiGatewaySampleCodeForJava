@@ -1,5 +1,5 @@
 import Detailed.ResearcherDetailed;
-import Search.SearchThesis;
+import Search.SearchPaper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
@@ -54,7 +54,7 @@ public class CallApiInfo {
                 if(el.getElementsByTagName("item").item(0).getChildNodes().item(0).getNodeValue().equals("API-003-01")){
                     String query=URLEncoder.encode(el.getElementsByTagName("item").item(2)
                                     .getChildNodes().item(0).getNodeValue());
-                    String searchResponse =SearchThesis.getSearchResults(query);
+                    String searchResponse = SearchPaper.getSearchResults(query);
                     System.out.println(searchResponse);
                 }
             }
@@ -81,7 +81,7 @@ public class CallApiInfo {
                 if (temObject.get("content").toString().equals("API-001-01")){
                     temObject= (JSONObject) callAPIInfo.get(2);
                     String query=URLEncoder.encode(temObject.get("content").toString());
-                    String searchResponse = SearchThesis.getSearchResults(query);
+                    String searchResponse = SearchPaper.getSearchResults(query);
                     System.out.println(searchResponse);
                 }
             }

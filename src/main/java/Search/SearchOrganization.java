@@ -9,8 +9,8 @@ import java.net.URLEncoder;
 
 public class SearchOrganization {
 
-    public static final  String target="ORGAN";
-    public static final String clientID="Your ClientId";
+    private static final  String target="ORGAN";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args){

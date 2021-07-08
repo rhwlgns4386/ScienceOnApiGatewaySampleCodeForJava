@@ -9,8 +9,8 @@ import java.net.URLEncoder;
 
 public class SearchAuthor {
 
-    public static final  String target="AUTHOR";
-    public static final String clientID="Your ClientId";
+    private static final  String target="AUTHOR";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args){
@@ -19,7 +19,7 @@ public class SearchAuthor {
          * 검색어를 인코딩 합니다.
          * 검색어 필드에 관한것은 ScienceOn Api GateWay를 참고 해주세요.
          */
-        String query= URLEncoder.encode("{\"BI\":\"코로나\"}");
+        String query= URLEncoder.encode("{\"BI\":\"kim\"}");
 
         /** 검색할 쿼리를 입력하여 전자전기 검색 api에 request를 요청하고 response를 받는다. */
         String response= SearchAuthor.getSearchResults(query);

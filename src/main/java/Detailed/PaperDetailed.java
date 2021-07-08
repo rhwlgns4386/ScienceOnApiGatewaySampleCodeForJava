@@ -1,47 +1,42 @@
-package Search;
+package Detailed;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 
-public class SearchThesis {
+public class PaperDetailed {
 
     public static final  String target="ARTI";
     public static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
-        /**
-         * 검색어를 인코딩 합니다.
-         * 검색어 필드에 관한것은 ScienceOn Api GateWay를 참고 해주세요.
-         */
-        String query= URLEncoder.encode("{\"BI\":\"코로나\"}");
+        String cn="JAKO200411922932805";
 
-        /** 검색할 쿼리를 입력하여 논문 검색 api에 request를 요청하고 response를 받는다. */
-        String response=SearchThesis.getSearchResults(query);
+        /** cn을 입력하여 논문 상세보기 api에 request를 요청하고 response를 받는다. */
+        String response=PaperDetailed.select(cn);
 
         System.out.println(response);
     }
 
     /**
-     * @brief 각각의 검색 api를 사용하기 위한 함수
+     * @brief 각각의 상세보기 api를 사용하기 위한 함수
      * @return String:요청을 받은 xml값
-     * @param query:url인코딩된 검색 데이터 입력
+     * @param cn:해당 CN 번호 입력
      */
-    public static String getSearchResults(String query){
+    private static String select(String cn) {
         String target_URL="https://apigateway.kisti.re.kr/openapicall.do?" +
                 "client_id=" +clientID+
-                "&token=" +accessToken+
+                "&token="+accessToken+
                 "&version=1.0" +
-                "&action=search" +
+                "&action=browse" +
                 "&target=" +target+
-                "&searchQuery="+query;
+                "&cn="+cn;
 
-        String response=getResponse(target_URL);
+        /** api요청을 보냅니다. */
+        String response = getResponse(target_URL);
+
         return response;
     }
 

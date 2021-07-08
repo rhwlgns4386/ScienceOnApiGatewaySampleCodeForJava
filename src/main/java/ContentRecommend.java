@@ -6,8 +6,8 @@ import java.net.URL;
 
 public class ContentRecommend {
 
-    public static final String target="RECOMMEND";
-    public static final String clientID="Your ClientId";
+    private static final String target="RECOMMEND";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
 

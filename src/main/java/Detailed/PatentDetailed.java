@@ -8,8 +8,8 @@ import java.net.URL;
 
 public class PatentDetailed {
 
-    public static final  String target="PATENT";
-    public static final String clientID="Your ClientId";
+    private static final  String target="PATENT";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args) throws Exception {

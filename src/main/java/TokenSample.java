@@ -57,8 +57,8 @@ public class TokenSample {
          * 최초 token요청을 합니다.
          * RefreshToken과 AccessToken을 발급 받습니다.
          */
-        String tokenResponse=TokenSample.createToken(aes256Util);
-        System.out.println(tokenResponse);
+//        String tokenResponse=TokenSample.createToken(aes256Util);
+//        System.out.println(tokenResponse);
 
         /** 데이터를 요청하고 그에 맞는 데이터를 받습니다.
          * 하단의 코드는 예제코드이며 자세한 내용은 ScienceOn ApiGateWay를 참조해주세요.
@@ -90,7 +90,7 @@ public class TokenSample {
         if(textNode.getNodeValue().equals("401")){
             if(response.contains("E4103")){
                 System.out.println("AccessToken이 만료 되었습니다.");
-                tokenResponse=TokenSample.getAccessToken();
+                String tokenResponse=TokenSample.getAccessToken();
                 if(tokenResponse.contains("E4106")){
                     System.out.println("RefreshToken이 만료 되었습니다.");
                     TokenSample.createToken(aes256Util);

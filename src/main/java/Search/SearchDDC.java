@@ -8,8 +8,8 @@ import java.net.URL;
 
 public class SearchDDC {
 
-    public static final String target="DDC";
-    public static final String clientID="Your ClientId";
+    private static final String target="DDC";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] arg){

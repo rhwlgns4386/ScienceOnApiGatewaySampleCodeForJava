@@ -9,8 +9,8 @@ import java.net.URLEncoder;
 
 public class SearchTrends {
 
-    public static final  String target="ATT";
-    public static final String clientID="Your ClientId";
+    private static final  String target="ATT";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] args){

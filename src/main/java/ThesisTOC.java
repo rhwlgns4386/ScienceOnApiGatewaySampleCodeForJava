@@ -9,8 +9,8 @@ import java.net.URL;
 
 public class ThesisTOC {
 
-    public static final String target="VOLUME";
-    public static final String clientID="Your ClientId";
+    private static final String target="VOLUME";
+    private static final String clientID="Your ClientId";
     private static final String accessToken="Your AccessToken";
 
     public static void main(String[] arg) throws Exception{
