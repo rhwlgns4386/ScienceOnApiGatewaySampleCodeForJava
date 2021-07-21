@@ -14,8 +14,8 @@ public class ScienceOnResolver {
 
     public static void main(String[] arg) throws Exception{
 
-        String thesisTitle="Association of p53 Expression with Metabolic Features of Stage I Non-Small Cell Lung Cancer";
-        String query=URLEncoder.encode(thesisTitle);
+        String paperTitle="Association of p53 Expression with Metabolic Features of Stage I Non-Small Cell Lung Cancer";
+        String query=URLEncoder.encode(paperTitle);
 
         /** 검색할 쿼리를 입력하여 링크리졸버 api에 request를 요청하고 response를 받는다. */
         String response=ScienceOnResolver.getResolverResponse(query);
@@ -25,16 +25,16 @@ public class ScienceOnResolver {
     /**
      * @brief ScienceON 링크리졸버 API사용 함수
      * @return String:요청을 받은 xml값
-     * @param thesisTitle:정보를 원하는 논문 명
+     * @param paperTitle:정보를 원하는 논문 명
      */
-    public static String getResolverResponse(String thesisTitle){
+    public static String getResolverResponse(String paperTitle){
         String target_URL="https://apigateway.kisti.re.kr/openapicall.do?" +
                 "client_id=" +clientID+
                 "&token=" +accessToken+
                 "&version=1.0" +
                 "&action=resolver" +
                 "&target=" +target+
-                "&atitle="+thesisTitle;
+                "&atitle="+paperTitle;
 
 
         String response=getResponse(target_URL);

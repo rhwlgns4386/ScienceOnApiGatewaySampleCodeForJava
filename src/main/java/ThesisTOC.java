@@ -36,7 +36,7 @@ public class ThesisTOC {
                 "client_id=" +clientID+
                 "&token="+accessToken+
                 "&version=1.0" +
-                "&action=volume" +
+                "&action=toc" +
                 "&target=" +target+
                 "&cn="+cn+
                 "&volno="+volno;
