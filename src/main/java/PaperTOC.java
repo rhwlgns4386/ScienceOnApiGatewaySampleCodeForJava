@@ -7,7 +7,7 @@ import java.net.URL;
 
 
 
-public class ThesisTOC {
+public class PaperTOC {
 
     private static final String target="VOLUME";
     private static final String clientID="Your ClientId";
@@ -19,7 +19,7 @@ public class ThesisTOC {
         String volno="3";
 
         /** cn과 volno를 입력받아 kisti의 권호정보를 반환 받습니다. */
-        String response=ThesisTOC.getTOC(cn,volno);
+        String response=PaperTOC.getTOC(cn,volno);
 
         System.out.println(response);
     }
